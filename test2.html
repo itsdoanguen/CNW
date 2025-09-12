@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function UpcaseChars() {
+            var x = document.getElementsByName("t1")[0].value;
+            document.getElementsByName("t2")[0].value = x.toUpperCase();
+        }
+
+        function UpcaseChars1() {
+            var x = document.f1.t1.value;
+            document.f1.t2.value = x.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="f1" method="">
+        <input type="text" name="t1" value="" onblur="UpcaseChars()">
+        <input type="text" name="t2" value="">
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Login</h2>
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-row" style="justify-content: center; gap: 20px;">
+                <input type="submit" value="OK" onclick="submitForm()">
+                <input type="reset" value="Reset" onclick="resetForm()">
+            </div>
+        </form>   
+    </div>
+</body>
+</html>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #caffcc;
+    }
+    .form-container {
+        font-family: Arial, sans-serif;
+        background: #caffcc;
+        padding: 24px 32px 24px 32px;
+        border-radius: 8px;
+        box-shadow: none;
+        width: 370px;
+        box-sizing: border-box;
+        border: none;
+    }
+    .form-title {
+        text-align: center;
+        color: #222;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+    }
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+    .form-row label {
+        width: 110px;
+        font-size: 17px;
+        color: #222;
+        font-weight: 500;
+    }
+    .form-row input[type="text"],
+    .form-row input[type="password"] {
+        flex: 1;
+        font-size: 16px;
+        padding: 2px 6px;
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        margin-left: 8px;
+    }
+</style>
+
+<script>
+    function resetForm() {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+    }
+    function submitForm() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        alert("Username: " + username + "\nPassword: " + password);
+    }
+</script>

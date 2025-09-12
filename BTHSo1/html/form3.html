@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="form3.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="../image/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="search-area">
+            <input type="text" class="search-input" placeholder="Tìm kiếm thông tin">
+            <input type="submit" class="search-btn" value="">
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="form3.html" target="t3">HOME</a></li>
+            <li class="has-sub"><a href="#">GIỚI THIỆU</a>
+                <ul class="sub-menu hidden-menu">
+                    <li><a href="form3_index.html" target="t3">Tầm nhìn và Sứ mạng</a></li>
+                    <li><a href="form3_index.html" target="t3">Chiến lược phát triển</a></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="form3_index.html" target="t3">TUYỂN SINH</a>
+            </li>
+            <li class="has-sub"><a href="#">ĐÀO TẠO</a>
+                <ul class="sub-menu hidden-menu">
+                    <li><a href="form3_index.html" target="t3">Mô hình đào tạo</a></li>
+                    <li><a href="form3_index.html" target="t3">Đào tạo đại học</a></li>
+                    <li><a href="form3_index.html" target="t3">Đào tạo sau đại học</a></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">NGHIÊN CỨU KHOA HỌC</a>
+                <ul class="sub-menu hidden-menu">
+                    <li><a href="form3_index.html" target="t3">Nghiên cứu khoa học</a></li>
+                    <li><a href="form3_index.html" target="t3">Bài báo khoa học</a></li>
+                    <li><a href="form3_index.html" target="t3">Công trình nghiên cứu</a></li>
+                </ul>
+            </li>
+            <li><a href="form3_index.html" target="t3">LIÊN HỆ</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <div class="slider">
+            <img src="../image/anhkhoa_1.png" alt="Slider" class="slider-img">
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.main-nav .has-sub').forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                var submenu = item.querySelector('.sub-menu');
+                if (submenu) submenu.classList.remove('hidden-menu');
+            });
+            item.addEventListener('mouseleave', function () {
+                var submenu = item.querySelector('.sub-menu');
+                if (submenu) submenu.classList.add('hidden-menu');
+            });
+        });
+    </script>
+</body>
+
+</html>

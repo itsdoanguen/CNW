@@ -1,0 +1,36 @@
+<div class="welcomeContainer">
+    <img src="../image/image1.jpg" alt="Image 1" class="welcomeImage">
+    <div class="welcomeText">
+        <marquee behavior="scroll" direction="left">Bài tập thực hành số 1</marquee>
+    </div>
+    <img src="../image/image2.jpg" alt="Image 2" class="welcomeImage">
+</div>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .welcomeText {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+    .welcomeImage {
+        height: 60px;
+        vertical-align: middle;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .welcomeContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+    }
+</style>

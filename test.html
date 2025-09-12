@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		function doimau(){
+			var color = document.getElementsByName("t1")[0].value;
+			document.body.style.backgroundColor = color;
+		}
+	</script>
+</head>
+<body>
+	<I> Chao cac ban! </I>
+	<B>	Hello World!</B>
+	<hr
+
+	<form name="testForm" method="" action="">
+		<input type="text" name="t1" value="">
+		<select name="colorSelect" id="">
+			<option value="red">Red</option>
+			<option value="green">Green</option>
+			<option value="blue">Blue</option>
+		</select>
+		<textarea name="t3" id="">
+			Day la noi dung cua the textarea
+			Cac ban co the viet nhieu dong	
+			De tao thanh phan cua the textarea
+		</textarea>
+		<div>
+			<input type="radio" name="r1" value="Nam" checked>Nam
+			<input type="radio" name="r1" value="Nu">Nu
+			<input type="checkbox" name="c1" value="Doc lap">Doc lap
+			<input type="checkbox" name="c2" value="Tu do">Tu do
+			<input type="checkbox" name="c3" value="Hanh phuc">Hanh phuc
+		</div>
+		<input type="button" name="b1" value="OK" onclick="doimau()">
+		<input type="reset" name="b2" value="Reset" onclick="resetForm()">
+	</form>
+</body>
+</html>

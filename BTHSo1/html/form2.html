@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">VÍ DỤ VỀ TẠO FORM</h2>
+        <form action="#" name="exampleForm">
+            <div class="form-row">
+                <label for="textbox">Text box:</label>
+                <input type="text" id="textbox" name="Text box" value="">
+            </div>
+            <div class="form-row">
+                <label for="textarea">Text Area:</label>
+                <textarea id="textarea" name="textarea" rows="2" style="resize:vertical;"></textarea>
+            </div>
+            <div class="form-row">
+                <label for="filebox">File box:</label>
+                <input type="file" id="filebox" name="File">
+            </div>
+            <div class="form-row">
+                <input type="radio" name="r1" value="Option 1" checked> Radio button
+            </div>
+            <div class="form-row">
+                <input type="checkbox" name="c1" value="Check 1"> Check box
+            </div>
+            <div class="form-row">
+                <input type="submit" value="Submit" onclick="submitForm()">
+                <input type="reset" value="Reset" onclick="resetForm()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #b3e3e6;
+    }
+    .form-container {
+        font-family: Arial, sans-serif;
+        background: #b3e3e6;
+        padding: 24px 32px 24px 32px;
+        border-radius: 8px;
+        box-shadow: none;
+        width: 420px;
+        box-sizing: border-box;
+        border: none;
+    }
+    .form-title {
+        text-align: center;
+        color: #d60000;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+    }
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .form-row label {
+        width: 110px;
+        font-size: 17px;
+        color: #222;
+        font-weight: 500;
+    }
+    .form-row input[type="text"],
+    .form-row textarea,
+    .form-row input[type="file"] {
+        flex: 1;
+        font-size: 16px;
+        padding: 2px 6px;
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        margin-left: 8px;
+    }
+</style>
+
+<script>
+    function resetForm() {
+        document.exampleForm.reset();
+    }
+    function submitForm() {
+        const formData = new FormData(document.exampleForm);
+        let message = "";
+        formData.forEach((value, key) => {
+            message += key + ": " + value + "\n";
+        });
+        alert(message);
+    }
+</script>
