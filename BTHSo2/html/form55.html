@@ -1,0 +1,32 @@
+<head>
+    <script>
+        function selectInput() {
+            var selectedIndex = document.f1.selectlist.selectedIndex;
+            document.f1.t1.value = selectedIndex;
+        }
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #b2e0ff 0%, #e0f7ff 100%);
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="f1">
+        <select name="selectlist" id="selectlist">
+            <option value="index0">index 0</option>
+            <option value="index1">index 1</option>
+            <option value="index2">index 2</option>
+            <option value="index3">index 3</option>
+        </select>
+        <input type="text" name="t1" value="" disabled>
+        <input type="button" name="okbutton" value="OK" onclick="selectInput()">
+    </form>
+</body>

@@ -1,0 +1,122 @@
+<script>
+    function User(name, age, email, address) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.address = address;
+    }
+    User.prototype.getInfoWith = function () {
+        var obj = this;
+        with (obj) {
+            return (
+                "Tên: " +
+                name +
+                "\n" +
+                "Tuổi: " +
+                age +
+                "\n" +
+                "Email: " +
+                email +
+                "\n" +
+                "Địa chỉ: " +
+                address
+            );
+        }
+    };
+    window.onload = function () {
+        var btnShow = document.getElementById("btnShow");
+        var output = document.getElementById("output");
+        btnShow.onclick = function () {
+            var user = new User(
+                "Nguyễn Đoàn Nguyên",
+                20,
+                "nguyendn@example.com",
+                "123 Đường ABC, Quận XYZ"
+            );
+            var info = user.getInfoWith();
+            output.innerText = info;
+        };
+    };
+</script>
+<body>
+    <div class="container">
+        <h2>OOP trong JS</h2>
+        <div id="output" class="info">Chưa có thông tin</div>
+        <div class="btn-group">
+            <input type="button" id="btnShow" value="Hiển thị thông tin người dùng" />
+            <input type="button" id="btnClear" value="Xóa thông tin" onclick="document.getElementById('output').innerText='Chưa có thông tin'" />
+        </div>
+    </div>
+</body>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #b2e0ff 0%, #e0f7ff 100%);
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        background: #fafdffcc;
+        border: 2.5px solid #00c6ff;
+        border-radius: 22px;
+        box-shadow: 0 8px 32px rgba(0,114,255,0.10), 0 2px 8px rgba(0,198,255,0.10);
+        padding: 32px 28px 28px 28px;
+        min-width: 320px;
+        max-width: 420px;
+        width: 90vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    h2 {
+        color: #00aaff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #e0f7ffcc;
+    }
+    .info {
+        color: #0072ff;
+        background: #e0f7ffcc;
+        border-radius: 8px;
+        padding: 10px 0 10px 0;
+        min-width: 220px;
+        font-size: 1.08rem;
+        font-weight: 600;
+        box-shadow: 0 1px 4px #b2e0ff66;
+        margin-bottom: 8px;
+    }
+    .btn-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        width: 100%;
+    }
+    input[type="button"] {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #b2e0ff44;
+        transition: background 0.2s, transform 0.15s;
+    }
+    input[type="button"]:hover {
+        background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+        transform: translateY(-2px) scale(1.04);
+    }
+</style>

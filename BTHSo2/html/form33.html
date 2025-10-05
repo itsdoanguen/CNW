@@ -1,0 +1,45 @@
+<head>
+    <script>
+        window.onload = function(){
+            document.f1.t1.focus();
+        }
+        function UpcaseChars() {
+            var x = document.f1.t1.value;
+            document.f1.t2.value = myUpperCase(x);
+        }
+        function myUpperCase(str) {
+            var result = "";
+            for (var i = 0; i < str.length; i++) {
+                var charCode = str.charCodeAt(i);
+                if (charCode >= 97 && charCode <= 122) { 
+                    result += String.fromCharCode(charCode - 32);
+                } else if (charCode >= 65 && charCode <= 90) {
+                    result += String.fromCharCode(charCode + 32);
+                } else {
+                    result += str.charAt(i);
+                }
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="f1" method="">
+        <input type="text" name="t1" value="" onblur="UpcaseChars()">
+        <input type="text" name="t2" value="">
+    </form>
+</body>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #b2e0ff 0%, #e0f7ff 100%);
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    body {
+        letter-spacing: 1.2px;
+            text-shadow: 0 2px 8px #e0f7ffcc;
+        }
+</style>

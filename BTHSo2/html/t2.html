@@ -1,0 +1,89 @@
+<div class="menu">
+    <h2>Mục lục</h2>
+    <ul>
+        <li><a href="t3.html" target="t3">Trang chủ</a></li>
+        <li><a href="form11.html" target="t3">Mục 1</a></li>
+        <li><a href="form22.html" target="t3">Mục 2</a></li>
+        <li><a href="form33.html" target="t3">Mục 3</a></li>
+        <li><a href="form44.html" target="t3">Mục 4</a></li>
+        <li><a href="form55.html" target="t3">Mục 5</a></li>
+    </ul>
+</div>
+
+<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100%;
+		font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+		background: #232526;
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		min-height: 100vh;
+	}
+	.menu {
+		font-family: inherit;
+		padding: 20px 16px;
+		background: rgba(35,37,38,0.92);
+		box-sizing: border-box;
+		overflow: hidden;
+		border: 2.5px solid #00c6ff;
+		border-radius: 16px;
+		box-shadow: 0 2px 12px rgba(0,198,255,0.10);
+		transition: box-shadow 0.2s, border-color 0.2s;
+		min-width: 180px;
+		min-height: 320px;
+		max-width: 95vw;
+		max-height: 90vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.menu:hover {
+		box-shadow: 0 4px 24px rgba(0,198,255,0.18);
+		border-color: #0072ff;
+	}
+	.menu h2 {
+		color: #00c6ff;
+		margin-bottom: 18px;
+		text-align: center;
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		font-weight: 700;
+		text-shadow: 0 2px 8px rgba(0,198,255,0.10);
+	}
+	.menu ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.menu li {
+		margin-bottom: 14px;
+		border-radius: 8px;
+		transition: background 0.2s;
+	}
+	.menu li:hover {
+		background: linear-gradient(90deg, #00c6ff22 0%, #0072ff22 100%);
+	}
+	.menu a {
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		font-size: 18px;
+		padding: 8px 12px;
+		border-radius: 8px;
+		transition: color 0.2s, background 0.2s;
+	}
+	.menu a:hover {
+		color: #00c6ff;
+		background: #fff2;
+	}
+</style>

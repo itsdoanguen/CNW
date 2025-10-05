@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function selectInput() {
+            var x = document.f1.t1.value;
+            var x_interger = parseInt(x);
+            console.log(typeof x_interger, x_interger);
+
+            if (!isNaN(x_interger) && x_interger >= 0 && x_interger < 4) {
+                document.f1.selectlist.selectedIndex = x_interger;
+            } else {
+                console.log("Invalid input");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="" name="f1" method="">
+
+        <select name="selectlist" id="">
+            <option value="index0">index 0</option>
+            <option value="index1">index 1</option>
+            <option value="index2">index 2</option>
+            <option value="index3">index 3</option>
+        </select>
+
+        <input type="text" name="t1" value=""">
+        <input type="button" name="okbutton" value="OK" onclick="selectInput()">
+    </form>
+</body>
+
+</html>
