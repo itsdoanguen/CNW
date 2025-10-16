@@ -30,3 +30,7 @@
         margin-top: 100px;
     }
 </style>
+
+<div style="text-align:center; margin-top: 18px;">
+    <a href="index.php" style="display:inline-block; padding:8px 12px; background:#0078d4; color:#fff; text-decoration:none; border-radius:4px;">Quay về trang chính</a>
+</div>

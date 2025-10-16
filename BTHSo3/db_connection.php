@@ -30,4 +30,17 @@
         $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
         return $result;
     }
+
+    function getUserAccount($link, $username, $password) {
+        $query = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
+        $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
+        return mysqli_num_rows($result) > 0;
+    }
+
+    function getPBbyID($link, $idpb) {
+        $idpb = mysqli_real_escape_string($link, $idpb);
+        $query = "SELECT * FROM phongban WHERE IDPB = '$idpb'";
+        $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
+        return mysqli_fetch_assoc($result);
+    }
 ?>
