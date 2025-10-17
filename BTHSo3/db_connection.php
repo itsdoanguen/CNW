@@ -43,4 +43,11 @@
         $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
         return mysqli_fetch_assoc($result);
     }
+
+    function isIDNVexists($link, $idnv) {
+        $idnv = mysqli_real_escape_string($link, $idnv);
+        $query = "SELECT * FROM nhanvien WHERE IDNV = '$idnv'";
+        $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
+        return mysqli_num_rows($result) > 0;
+    }
 ?>

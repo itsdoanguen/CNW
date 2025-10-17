@@ -36,7 +36,7 @@
                 <td>" . $row['Hoten'] . "</td>
                 <td>" . $row['IDPB'] . "</td>
                 <td>" . $row['Diachi'] . "</td>
-                <td><input type='checkbox' name='selected_nv[]' value='" . $row['IDNV'] . "'></td>
+                <td><input type='checkbox' name='" . $row['IDNV'] . "' value='" . $row['IDNV'] . "'></td>
               </tr>";
     }
     echo "</table>";
